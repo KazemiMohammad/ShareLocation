@@ -1,0 +1,111 @@
+.share-location-component {
+  .form {
+    * {
+      outline: none;
+    }
+    display: grid;
+    grid-template-columns: 130px auto;
+    grid-gap: 10px;
+
+    .location-name {
+      line-height: 27px;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 1px 5px;
+      border: solid 1px silver;
+    }
+
+    .location-type {
+      height: 31px;
+      width: 100%;
+      padding: 5px;
+      overflow: hidden;
+      position: relative;
+      box-sizing: border-box;
+      border: solid 1px silver;
+      border-radius: 3px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: linear-gradient(to right, silver, silver),
+        linear-gradient(45deg, transparent 50%, white 50%),
+        linear-gradient(135deg, white 50%, transparent 50%),
+        linear-gradient(180deg, #d8ecfd, #b1defd);
+      background-position: calc(100% - 2em), calc(100% - 13px), calc(100% - 6px),
+        101% 0px;
+      background-size: 1px 2.2em, 8px 8px, 8px 8px, 2.2em 2.2em;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .map {
+    height: 200px;
+    width: 260px;
+    border: solid 1px silver;
+  }
+
+  .logo-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .logo-file-input::before {
+    box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    color: white;
+    content: "Upload";
+    font-size: 10pt;
+    display: inline-block;
+    border: 1px solid #448bc9;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-weight: 700;
+    background: url("../../assets/upload.png"),
+      linear-gradient(
+        180deg,
+        rgba(68, 139, 201, 1) 35%,
+        rgba(255, 255, 255, 1) 35%
+      );
+    // background-image: url('../../assets/upload.png');
+    background-size: 30px 30px, 100% 100%;
+    background-position: center 33px, 0 0;
+    background-repeat: no-repeat;
+  }
+  .logo-file-input:hover::before {
+    border-color: #448bc9;
+  }
+  .logo-file-input:active::before {
+    background: -webkit-linear-gradient(top, #448bc9, #448bc9);
+  }
+  .btn-wrapper {
+    text-align: right;
+    grid-column: 1 / span 2;
+    margin-top: 10px;
+
+    .btn {
+      line-height: 27px;
+      background-color: gray;
+
+      border: none;
+      border-radius: 3px;
+      color: white;
+      margin: 3px;
+      min-width: 70px;
+      &.default {
+        background-color: #5dbfde;
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    .form {
+      grid-template-columns: auto;
+    }
+  }
+}

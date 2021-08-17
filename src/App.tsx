@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.scss";
+import { Modal } from "./components/Modal";
+import { useModal } from "./components/Modal/useModal";
+import ShareLocation from "./components/ShareLocation";
+import Map from "./components/Map";
+import { useSelector } from "react-redux";
+import { LocationStateType } from "./redux/reducer";
+import { useEffect } from "react";
+const mapState = (state: LocationStateType) => {
+  return {
+    locations: state.locations,
+  };
+};
 function App() {
+  const { isShown, toggle } = useModal();
+  const { locations } = useSelector(mapState);
+  useEffect(() => {
+    !locations.length && toggle();
+  }, [locations]);
+
+  const shareLocation = <ShareLocation hideModal={toggle} />;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Map toggle={toggle} />
+      <Modal
+        headerText="Share Location"
+        isShown={isShown}
+        hide={toggle}
+        modalContent={shareLocation}
+      />
     </div>
   );
 }

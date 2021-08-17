@@ -1,0 +1,50 @@
+.location-detail-component {
+  .header {
+    font-size: 15px;
+    font-weight: 600;
+    color: #5eb961;
+    padding: 5px;
+    background-color: #e1f0d8;
+    box-sizing: border-box;
+    height: 33px;
+    width: 100%;
+  }
+  .form {
+    display: grid;
+    grid-template-columns: 90px 150px;
+    padding: 5px;
+    line-height: 27px;
+    .btn-wrapper {
+      text-align: right;
+      grid-column: 1 / span 2;
+      margin-top: 10px;
+
+      .btn {
+        line-height: 27px;
+        background-color: gray;
+        border: none;
+        border-radius: 3px;
+        color: white;
+        margin: 3px;
+        min-width: 70px;
+        &.default {
+          background-color: #5dbfde;
+        }
+      }
+    }
+  }
+}
+.leaflet-popup-content-wrapper {
+  border: solid 1px #e1f0d8;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  .leaflet-popup-content {
+    padding: 0;
+    margin: 0;
+    width: auto !important;
+  }
+}
+.leaflet-popup-close-button {
+  top: 3px !important;
+}
