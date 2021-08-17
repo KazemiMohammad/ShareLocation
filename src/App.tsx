@@ -16,7 +16,7 @@ function App() {
   const { locations } = useSelector(mapState);
   useEffect(() => {
     !locations.length && toggle();
-  }, [locations]);
+  }, [locations,toggle]);
 
   const shareLocation = <ShareLocation hideModal={toggle} />;
 

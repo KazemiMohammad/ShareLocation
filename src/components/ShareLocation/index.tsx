@@ -10,7 +10,7 @@ import {
 import "leaflet/dist/leaflet.css";
 import { customMapMarkerIcon } from "../../utils/customMapMarketIcon";
 import "./style.scss";
-import { LatLngLiteral, LatLngTuple } from "leaflet";
+import { LatLngLiteral } from "leaflet";
 
 interface iShareLocationProps {
   hideModal: VoidFunction;

@@ -1,4 +1,3 @@
-import { LatLngLiteral } from "leaflet";
 import { ActionType } from "./actionType";
 
 export interface LocationType {

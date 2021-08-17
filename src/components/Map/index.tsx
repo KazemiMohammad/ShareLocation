@@ -3,11 +3,7 @@ import L, { LatLngLiteral } from "leaflet";
 import { Marker, Popup, useMapEvents } from "react-leaflet";
 import { MapContainer, TileLayer } from "react-leaflet";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  LocationType,
-  PlaceType,
-  SetSelectedLocation,
-} from "../../redux/action";
+import { LocationType, SetSelectedLocation } from "../../redux/action";
 import "leaflet/dist/leaflet.css";
 import { customMapMarkerIcon } from "../../utils/customMapMarketIcon";
 import LocationDetail from "../LocationDetail";
