@@ -27,6 +27,7 @@ interface LocationMarkerPropsType {
   setLatLng: any;
 }
 function LocationMarker(props: LocationMarkerPropsType) {
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   const map = useMapEvents({
     click(e) {
       props.setLatLng(e.latlng);
