@@ -16,8 +16,8 @@ function App() {
   const { locations } = useSelector(mapState);
   useEffect(() => {
     !locations.length && toggle();
-  }, [locations,toggle]);
-
+  }, [locations]);// eslint-disable-line react-hooks/exhaustive-deps
+  
   const shareLocation = <ShareLocation hideModal={toggle} />;
 
   return (
